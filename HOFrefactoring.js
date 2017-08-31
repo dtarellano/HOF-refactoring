@@ -48,3 +48,17 @@ function getElementsLessThan100AtProperty(obj, key) {
   }
   return [];
 }
+
+
+// Write a function called "getElementsGreaterThan10AtProperty".
+//
+// Given an object and a key, "getElementsGreaterThan10AtProperty" returns an array containing the elements within the array, located at the given key, that are greater than 10.
+
+function getElementsGreaterThan10AtProperty(obj, key) {
+  if(obj.hasOwnProperty(key) && Array.isArray(obj[key])) {
+    return obj[key].filter(function(value, i) {
+      return value > 10;
+    });
+  }
+  return [];
+}
